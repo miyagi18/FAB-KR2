@@ -13,7 +13,17 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
 .header {
     background-color: #2c3e50;
     color: white;
@@ -134,25 +144,55 @@ body {
     color: #2c3e50;
 }
 
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+.skills {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
-.skill {
+.skills-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     padding: 1rem;
-    text-align: center;
-    font-weight: 500;
-    background-color: #ecf0f1;
+    background-color: #f8f9fa;
     border-radius: 4px;
-    transition: transform 0.2s ease;
+}
+
+.skill-name {
+    flex: 1;
+    font-weight: 500;
     color: #2c3e50;
 }
 
-.skill:hover {
-    transform: translateY(-2px);
-    background-color: #dfe6e9;
+.progress-bar {
+    flex: 2;
+    height: 8px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.progress-percent {
+    flex: 0 0 50px;
+    text-align: right;
+    font-weight: bold;
+    color: #2c3e50;
 }
 
 .projects {
