@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Главная страница</title>
+</head>
+
+<body>
+    <header class="header">
+        <p>Логотип</p>
+        <p class="StudentName">Гаужаев Тимур Олегович</p>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="/pages/projects.html">Проекты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="/pages/diary.html">Дневник</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="/pages/contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="profile">
+            <img class="profile_photo" src="/images/logo.png" alt="фото профиля">
+            <p class="about-text">Привет! Я студент
+                Факультет ИПТИП, группа ЭФБО-04-24
+                Увлекаюсь веб-разработкой
+            </p>
+            <a href="/resume.pdf" class="download-btn" download>
+                📄 Скачать резюме (PDF)
+            </a>
+        </section>
+        <section class="skills">
+            <h2 class="section-title">Мои навыки</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <p>HTML/CSS ██████████ 90%</p>
+                </div>
+                <div class="skill">
+                    <p>JavaScript ████████ 80%</p>
+                </div>
+                <div class="skill">
+                    <p>Bootstrap █████████ 85%</p>
+                </div>
+                <div class="skill">
+                    <p>React ██████ 60%</p>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <h2 class="section-title">Лучшие проекты</h2>
+            <div class="project-list">
+                <p class="project">Проект 1</p>
+                <p class="project">Проект 2</p>
+                <p class="project">проект 3</p>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Гаужаев Т.О. Все права защищены</p>
+        </div>
+    </footer>
+       <script src="../scripts/main.js"></script>
+    <script src="../scripts/filters.js"></script>
+    <script src="../scripts/form-validation.js"></script>
+    <script src="../scripts/modal.js"></script>
+</body>
+
+</html>
