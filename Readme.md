@@ -1,3 +1,6 @@
+# Структура проекта
+
+```
 base-project/
 │
 ├── index.html                      # Главная страница
@@ -24,6 +27,6 @@ base-project/
 │   ├── resume.pdf                 # Резюме для скачивания
 │
 └── README.md                      # Описание проекта
+```
 
- https://miyagi18.github.io/FAB-KR2/
-
+**Ссылка на проект:** https://miyagi18.github.io/FAB-KR2/
