@@ -1,6 +1,5 @@
 // Управление модальными окнами
 function initModal() {
-    // Создаем модальное окно для проектов
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
@@ -12,7 +11,6 @@ function initModal() {
         });
     });
     
-    // Модальное окно для добавления записи в дневник
     const addEntryBtn = document.querySelector('.add-entry-btn');
     if (addEntryBtn) {
         addEntryBtn.addEventListener('click', showDiaryModal);
@@ -40,18 +38,15 @@ function showProjectModal(title, tech) {
     const modal = document.querySelector('.modal-overlay');
     const closeBtn = document.querySelector('.modal-close');
     
-    // Закрытие модального окна
     closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', function(e) {
         if (e.target === modal) closeModal();
     });
     
-    // Закрытие по ESC
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeModal();
     });
     
-    // Добавляем стили для модального окна
     addModalStyles();
 }
 

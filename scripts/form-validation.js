@@ -5,7 +5,6 @@ function initFormValidation() {
     if (contactForm) {
         contactForm.addEventListener('submit', validateContactForm);
         
-        // Добавляем валидацию в реальном времени
         const inputs = contactForm.querySelectorAll('input, textarea');
         inputs.forEach(input => {
             input.addEventListener('blur', validateField);
@@ -39,16 +38,13 @@ function validateField(e) {
     let isValid = true;
     let errorMessage = '';
     
-    // Очищаем предыдущие ошибки
     clearFieldError(e);
     
-    // Проверяем обязательные поля
     if (field.hasAttribute('required') && !value) {
         isValid = false;
         errorMessage = 'Это поле обязательно для заполнения';
     }
     
-    // Проверка email
     if (field.type === 'email' && value) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(value)) {
@@ -57,7 +53,6 @@ function validateField(e) {
         }
     }
     
-    // Проверка минимальной длины для сообщения
     if (field.name === 'message' && value && value.length < 10) {
         isValid = false;
         errorMessage = 'Сообщение должно содержать минимум 10 символов';
@@ -101,7 +96,6 @@ function clearFieldError(e) {
 }
 
 function showSuccessMessage(form) {
-    // Создаем сообщение об успехе
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message';
     successMessage.style.cssText = `
@@ -117,7 +111,6 @@ function showSuccessMessage(form) {
     
     form.appendChild(successMessage);
     
-    // Убираем сообщение через 5 секунд
     setTimeout(() => {
         successMessage.style.animation = 'slideUp 0.3s ease forwards';
         setTimeout(() => {
@@ -125,7 +118,6 @@ function showSuccessMessage(form) {
         }, 300);
     }, 5000);
     
-    // Добавляем CSS анимации
     if (!document.getElementById('form-styles')) {
         const styles = `
             <style id="form-styles">

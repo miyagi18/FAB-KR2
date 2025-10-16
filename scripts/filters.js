@@ -5,7 +5,6 @@ function initFilters() {
     
     if (filterButtons.length === 0) return;
     
-    // Создаем карту соответствий фильтров и технологий
     const filterMap = {
         'все': ['html', 'css', 'javascript', 'react', 'bootstrap'],
         'html': ['html', 'css'],
@@ -15,18 +14,14 @@ function initFilters() {
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Убираем активный класс со всех кнопок
             filterButtons.forEach(btn => btn.classList.remove('active'));
             
-            // Добавляем активный класс текущей кнопке
             this.classList.add('active');
             
             const filterValue = this.textContent.toLowerCase();
             
-            // Получаем соответствующие технологии для фильтра
             const technologies = filterMap[filterValue] || [filterValue];
             
-            // Фильтруем проекты
             projectCards.forEach(card => {
                 const projectTech = card.querySelector('p').textContent.toLowerCase();
                 let shouldShow = false;
@@ -34,7 +29,6 @@ function initFilters() {
                 if (filterValue === 'все') {
                     shouldShow = true;
                 } else {
-                    // Проверяем совпадение с любой из технологий
                     shouldShow = technologies.some(tech => 
                         projectTech.includes(tech)
                     );
@@ -52,13 +46,11 @@ function initFilters() {
         });
     });
     
-    // Активируем кнопку "Все" по умолчанию
     const allButton = document.querySelector('.filter-btn');
     if (allButton) {
         allButton.classList.add('active');
     }
     
-    // Добавляем CSS для анимации
     if (!document.getElementById('filter-styles')) {
         const style = document.createElement('style');
         style.id = 'filter-styles';

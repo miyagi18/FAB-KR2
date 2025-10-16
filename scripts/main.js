@@ -1,8 +1,6 @@
-// Основной скрипт для инициализации всех модулей
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Сайт загружен');
     
-    // Инициализация всех модулей
     initFilters();
     initModal();
     initFormValidation();
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Наблюдаем за элементами с анимацией
     document.querySelectorAll('.project-card, .skill, .progress-item').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
